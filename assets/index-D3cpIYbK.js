@@ -57,7 +57,7 @@ Error generating stack: `+u.message+`
                        hover:from-blue-600 hover:to-cyan-400 
                        hover:scale-105 hover:shadow-lg 
                        focus:ring-4 focus:ring-cyan-300 
-                       transition-all duration-200 outline-none`,onClick:al=>{al.preventDefault(),Qo(M.current),setTimeout(()=>window.open("https://adeelaliyousaf.vercel.app","_blank"),600)},children:"🎉 View Portfolio"}),pl.jsx("a",{href:"/src/assets/AdeelAliYousafResume2025.pdf",download:!0,className:`bg-white/20 text-cyan-200 rounded-xl px-7 py-3 font-semibold 
+                       transition-all duration-200 outline-none`,onClick:al=>{al.preventDefault(),Qo(M.current),setTimeout(()=>window.open("https://adeelaliyousaf.vercel.app","_blank"),600)},children:"🎉 View Portfolio"}),pl.jsx("a",{href:"/AdeelAliYousafResume2025.pdf",download:!0,className:`bg-white/20 text-cyan-200 rounded-xl px-7 py-3 font-semibold 
                        shadow-md hover:bg-cyan-500/20 hover:scale-105 
                        hover:text-white focus:ring-4 focus:ring-cyan-300 
                        transition-all duration-200 outline-none`,children:"📄 Download CV"})]})]}),pl.jsx("style",{children:`
