@@ -15,7 +15,7 @@ export const metadata = {
     siteName: "Adeel Ali Yousaf's Portfolio",
     images: [
       {
-        url: '/Logo.png',
+        url: '/LogoDark.png',
         width: 1200,
         height: 630,
         alt: 'Contact Adeel Ali Yousaf',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Contact | Adeel Ali Yousaf',
     description: 'Get in touch for web development and digital solutions',
-    images: ['/Logo.png'],
+  images: ['/LogoDark.png'],
   },
   robots: {
     index: true,

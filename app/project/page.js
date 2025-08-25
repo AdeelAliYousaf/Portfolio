@@ -15,9 +15,9 @@ export const metadata = {
     description: 'Showcasing projects in web development and digital solutions',
     url: 'https://adeelaliyousaf.thedev.id/project',
     siteName: 'Adeel Ali Yousaf Portfolio',
-			images: [
-				{
-					url: '/Logo.png',
+				images: [
+					{
+						url: '/LogoDark.png',
 				width: 1200,
 				height: 630,
 				alt: 'Projects | Adeel Ali Yousaf',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Projects | Adeel Ali Yousaf',
     description: 'Showcasing projects in web development and digital solutions',
-	images: ['/Logo.png'],
+	images: ['/LogoDark.png'],
   },
   robots: {
     index: true,

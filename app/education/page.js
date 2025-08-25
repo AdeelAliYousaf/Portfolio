@@ -15,7 +15,7 @@ export const metadata = {
     siteName: "Adeel Ali Yousaf's Portfolio",
     images: [
       {
-        url: '/Logo.png',
+        url: '/LogoDark.png',
         width: 1200,
         height: 630,
         alt: 'Education | Adeel Ali Yousaf',
@@ -28,7 +28,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Education | Adeel Ali Yousaf',
     description: 'Explore my educational background, degrees, and certifications',
-    images: ['/Logo.png'],
+  images: ['/LogoDark.png'],
   },
   robots: {
     index: true,

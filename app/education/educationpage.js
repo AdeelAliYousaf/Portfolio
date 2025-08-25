@@ -142,13 +142,6 @@ const EducationTimeline = () => {
                             </div>
                           </div>
 
-                          {/* GPA Badge */}
-                          <div className="flex-shrink-0">
-                            <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm border border-yellow-500/30 rounded-xl px-3 py-1 text-center">
-                              <div className="text-xs text-white/60">GPA</div>
-                              <div className="text-lg sm:text-xl font-bold text-yellow-300">{education.gpa}</div>
-                            </div>
-                          </div>
                         </div>
 
                         {/* Specialization */}

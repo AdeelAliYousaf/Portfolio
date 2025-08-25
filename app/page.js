@@ -34,7 +34,7 @@ export const metadata = {
     siteName: "Adeel Ali Yousaf Portfolio 2025",
     images: [
       {
-        url: "/Adeel.jpg",
+        url: "/LogoDark.png",
         width: 1200,
         height: 630,
         alt: "Adeel Ali Yousaf Portfolio 2025"
