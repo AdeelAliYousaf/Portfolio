@@ -25,7 +25,7 @@ export const metadata = {
     siteName: "Adeel Ali Yousaf's Portfolio",
     images: [
       {
-        url: '/Portfolio/Logo.png',
+        url: '/Logo.png',
         width: 1200,
         height: 630,
         alt: 'Certifications | Adeel Ali Yousaf',
@@ -38,7 +38,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Certifications | Adeel Ali Yousaf',
     description: 'A list of my professional certifications.',
-  images: ['/Portfolio/Logo.png'],
+  images: ['/Logo.png'],
   },
   robots: {
     index: true,
@@ -70,12 +70,12 @@ const issuerIconMap = {
 
 // Map issuer keywords to local image paths (for those without react-icons)
 const issuerImageMap = {
-  "deeplearning.ai": "/Portfolio/My Certifications/courseraaiforeveryone.png",
-  microsoft: "/Portfolio/Certificate Icons/Microsoft.jpg",
-  testdome: "/Portfolio/Certificate Icons/Testdome.svg",
-  forage: "/Portfolio/Certificate Icons/Forage.png",
-  "electronic arts": "/Portfolio/My Certifications/eajobsim.webp",
-  "jp morgan": "/Portfolio/My Certifications/jpmorganjobsim.webp",
+  "deeplearning.ai": "/My Certifications/courseraaiforeveryone.png",
+  microsoft: "/Certificate Icons/Microsoft.jpg",
+  testdome: "/Certificate Icons/Testdome.svg",
+  forage: "/Certificate Icons/Forage.png",
+  "electronic arts": "/My Certifications/eajobsim.webp",
+  "jp morgan": "/My Certifications/jpmorganjobsim.webp",
 };
 
 function getIssuerIcon(issuer) {
@@ -101,14 +101,14 @@ const courses = [
     title: "AI For Everyone",
     issuer: "Coursera / DeepLearning.AI",
     date: "2024",
-  image: "/Portfolio/My Certifications/courseraaiforeveryone.png",
+  image: "/My Certifications/courseraaiforeveryone.png",
     url: "https://www.coursera.org/account/accomplishments/verify/7GKE32L7LW1J"
   },
   {
     title: "Introduction to Cybersecurity",
     issuer: "Cisco Networking Academy",
     date: "2025",
-  image: "/Portfolio/My Certifications/ciscocybersecuritycert.png",
+  image: "/My Certifications/ciscocybersecuritycert.png",
     url: "https://www.credly.com/badges/0d3308bc-e46b-43ec-a074-9885b5ec1ea4/public_url"
   },
 ];
@@ -119,21 +119,21 @@ const certificates = [
     title: "Foundational C# with Microsoft",
     issuer: "freeCodeCamp / Microsoft",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/foundationalcsharp.webp",
+  image: "/My Certifications/foundationalcsharp.webp",
     url: "https://www.freecodecamp.org/certification/fcc-92a05b6e-5327-408a-b87a-dde88e663e66/foundational-c-sharp-with-microsoft"
   },
   {
     title: "Scientific Computing with Python",
     issuer: "freeCodeCamp",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/scientificcomputing.webp",
+  image: "/My Certifications/scientificcomputing.webp",
     url: "https://www.freecodecamp.org/certification/fcc-92a05b6e-5327-408a-b87a-dde88e663e66/scientific-computing-with-python-v7"
   },
   {
     title: "Getting Started with AI on Jetson Nano",
     issuer: "Nvidia",
     date: "August 2025",
-  image: "/Portfolio/My Certifications/nvidiagetstartwithai.webp",
+  image: "/My Certifications/nvidiagetstartwithai.webp",
     url: "https://learn.nvidia.com/certificates?id=ng4oMzZWSZeANQ6lASqylQ"
   },
 
@@ -144,28 +144,28 @@ const SkillTests = [
     title: "Software Engineer",
     issuer: "HackerRank",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/hackerranksoftwareengineer.webp",
+  image: "/My Certifications/hackerranksoftwareengineer.webp",
     url: "https://www.hackerrank.com/certificates/d775a0d73a6d"
   },
   {
     title: "Python",
     issuer: "TestDome",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/testdomepython.webp",
+  image: "/My Certifications/testdomepython.webp",
     url: "https://www.testdome.com/certificates/6c11bd96dd264cffb249ac8304157593"
   },
   {
     title: "ASP.NET Core MVC",
     issuer: "TestDome",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/testdomeaspnet.webp",
+  image: "/My Certifications/testdomeaspnet.webp",
     url: "https://www.testdome.com/certificates/299aa2c51f8a4f87a5e6ac1f731dfa8d"
   },
   {
     title: "SQL",
     issuer: "TestDome",
     date: "September 2024",
-  image: "/Portfolio/My Certifications/testdomesql.jpg",
+  image: "/My Certifications/testdomesql.jpg",
     url: "https://www.testdome.com/certificates/948f951cb8284eeb971f0f7fc496a692"
   },
 ];
@@ -175,21 +175,21 @@ const badges = [
     title: "AWS Educate Introduction to Cloud 101",
     issuer: "Amazon Web Services",
     date: "2024",
-  image: "/Portfolio/My Certifications/awsintrotocloudbadge.png",
+  image: "/My Certifications/awsintrotocloudbadge.png",
     url: "https://www.credly.com/badges/39fa9520-1288-44f4-ad2b-0d4a01aa3e44/public_url"
   },
   {
     title: "AWS Education Introducation to Generative AI",
     issuer: "Amazon Web Services",
     date: "2024",
-  image: "/Portfolio/My Certifications/awsintrotogenai.png",
+  image: "/My Certifications/awsintrotogenai.png",
     url: "https://www.credly.com/badges/f8199c32-08a5-4f68-8f8f-64a289ccc13e/public_url"
   },
   {
     title: "Introduction to Cybersecurity",
     issuer: "Cisco",
     date: "2025",
-  image: "/Portfolio/My Certifications/ciscointrotocybersecurity.png",
+  image: "/My Certifications/ciscointrotocybersecurity.png",
     url: "https://www.credly.com/badges/0d3308bc-e46b-43ec-a074-9885b5ec1ea4/public_url"
   },
 ];
@@ -199,21 +199,21 @@ const Internships = [
     title: "Solution Architecture Job Simulation",
     issuer: "Forage / Amazon Web Services (AWS)",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/amazonjobsim.webp",
+  image: "/My Certifications/amazonjobsim.webp",
     url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/pmnMSL4QiQ9JCgE3W/kkE9HyeNcw6rwCRGw_pmnMSL4QiQ9JCgE3W_EyEWnFY4YWTWSAJBW_1753449738321_completion_certificate.pdf"
   },
   {
     title: "Software Engineering Job Simulation",
     issuer: "Forage / Electronic Arts (EA)",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/eajobsim.webp",
+  image: "/My Certifications/eajobsim.webp",
     url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/j43dGscQHtJJ57N54/a77WE3de8qrxWferQ_j43dGscQHtJJ57N54_EyEWnFY4YWTWSAJBW_1753448518818_completion_certificate.pdf"
   },
   {
     title: "Software Engineering Job Simulation",
     issuer: "Forage / JP Morgan Chase & Co.",
     date: "July 2025",
-  image: "/Portfolio/My Certifications/jpmorganjobsim.webp",
+  image: "/My Certifications/jpmorganjobsim.webp",
     url: "https://forage-uploads-prod.s3.amazonaws.com/completion-certificates/Sj7temL583QAYpHXD/E6McHJDKsQYh79moz_Sj7temL583QAYpHXD_EyEWnFY4YWTWSAJBW_1753399701894_completion_certificate.pdf"
   },
 ];

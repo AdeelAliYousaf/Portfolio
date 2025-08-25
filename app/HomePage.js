@@ -155,7 +155,7 @@ export default function Home() {
                 className="flex flex-col items-center relative"
               >
                 <Image
-                  src="/Portfolio/Logo.png"
+                  src="/Logo.png"
                   alt="Logo"
                   className="w-[36rem] h-[36rem] md:w-[36rem] md:h-[36rem] object-contain drop-shadow-2xl"
                   draggable={false}

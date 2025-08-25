@@ -15,9 +15,9 @@ export const metadata = {
     description: 'Showcasing projects in web development and digital solutions',
     url: 'https://adeelaliyousaf.thedev.id/project',
     siteName: 'Adeel Ali Yousaf Portfolio',
-		images: [
-			{
-				url: '/Portfolio/Logo.png',
+			images: [
+				{
+					url: '/Logo.png',
 				width: 1200,
 				height: 630,
 				alt: 'Projects | Adeel Ali Yousaf',
@@ -30,7 +30,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Projects | Adeel Ali Yousaf',
     description: 'Showcasing projects in web development and digital solutions',
-	images: ['/Portfolio/Logo.png'],
+	images: ['/Logo.png'],
   },
   robots: {
     index: true,
@@ -48,7 +48,7 @@ const projects = [
 		description:
 			"A web application that showcases a dynamic product catalog for B2B clients, built with Laravel Breeze, inertia js, React js and Tailwind CSS.",
 		url: "https://topinworldleather.com/",
-		image: "/Portfolio/TIWLAnimation.gif",
+		image: "/TIWLAnimation.gif",
 		languages: ["Laravel", "React", "Tailwind CSS"]
 	},
 	{
@@ -56,7 +56,7 @@ const projects = [
 		description:
 			"A web application that showcases a modern product portfolio for a US-based client, built with Laravel Breeze, inertia js, React js and Tailwind CSS.",
 		url: "https://veritasedgeglobal.com/",
-		image: "/Portfolio/VEGAnimation.gif",
+		image: "/VEGAnimation.gif",
 		languages: ["Laravel", "React", "Tailwind CSS"]
 	},
 ];

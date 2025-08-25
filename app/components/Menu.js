@@ -10,7 +10,7 @@ const menuItems = [
   { name: "Home", icon: Home, href: "/" },
   { name: "Education", icon: GraduationCap, href: "/education" },
   { name: "Certifications", icon: BadgeCheck, href: "/certification" },
-  { name: "Download CV", icon: Download, href: "/Portfolio/AdeelAliYousafResume2025.pdf", download: true },
+  { name: "Download CV", icon: Download, href: "/AdeelAliYousafResume2025.pdf", download: true },
   { name: "Projects", icon: FolderKanban, href: "/project" },
   { name: "Services", icon: Handshake, href: "/service" },
   { name: "Contact me", icon: Mail, href: "/contact" },

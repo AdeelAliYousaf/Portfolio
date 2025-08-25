@@ -195,7 +195,7 @@ const EducationTimeline = () => {
                         {education.id === 2 && (
                           <div className="mt-8 flex justify-center">
                             <ZoomImage
-                              src="/Portfolio/ADPDegree.webp"
+                              src="/ADPDegree.webp"
                               alt="Associate Degree Certificate"
                               className="rounded-xl shadow-lg max-w-xs sm:max-w-sm md:max-w-md w-full border border-white/10 bg-white/10"
                             />

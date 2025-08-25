@@ -20,7 +20,7 @@ export default function RootLayout({ children }) {
         <BackgroundGradient />
         <div className="flex justify-center items-center">
           <Image
-            src="/Portfolio/Logo.png"
+            src="/Logo.png"
             alt="Adeel Ali Yousaf Logo"
             width={110}
             height={110}
