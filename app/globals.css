@@ -2,6 +2,11 @@
 
 @import "tailwindcss";
 
+
+html {
+  font-family: "Poppins", sans-serif;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
