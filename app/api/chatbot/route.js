@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { portfolio } from "../../data/portfolio";
 
 const GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent";
-const GEMINI_API_KEY = "AIzaSyAyXF5Wm0KekESSLv9aS_rFXWvsbMayQ28";
+const GEMINI_API_KEY = "";
 
 // ---- Context for LLM ----
 function getPortfolioContext() {
@@ -165,7 +165,7 @@ export async function POST(req) {
 
   // 2. Try Hugging Face Inference API (text-generation, gpt2)
   try {
-    const HF_API_KEY = "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";
+    const HF_API_KEY = "";
     const hfRes = await fetch("https://api-inference.huggingface.co/models/gpt2", {
       method: "POST",
       headers: {
@@ -183,7 +183,7 @@ export async function POST(req) {
 
   // 3. Try OpenRouter API (if available)
   try {
-    const OPENROUTER_API_KEY = "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";
+    const OPENROUTER_API_KEY = "";
     const orRes = await fetch("https://openrouter.ai/api/v1/chat/completions", {
       method: "POST",
       headers: {
