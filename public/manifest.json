@@ -9,16 +9,9 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "/Logo.png",
-      "sizes": "192x192 256x256 384x384 512x512",
-      "type": "image/png",
-      "purpose": "any light"
-    },
-    {
       "src": "/LogoDark.png",
       "sizes": "192x192 256x256 384x384 512x512",
-      "type": "image/png",
-      "purpose": "any dark"
+      "type": "image/png"
     }
   ]
 }

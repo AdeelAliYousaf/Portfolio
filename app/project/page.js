@@ -112,6 +112,16 @@ const githubProjects = [
 		forks: 2,
 		languages: ["PHP", "MySQL"]
 	},
+	{
+		repo: "AdeelAliYousaf/usktgpacalculator",
+		url: "https://github.com/AdeelAliYousaf/usktgpacalculator",
+		name: "GPA Calculator Specifically designed for University of Sialkot's Students",
+		description:
+			"A Static Smart GPA Calculator for University of Sialkot Students. This Website is made with React JS & Tailwindcss using Smart Logics for Course Repeatations.",
+		stars: 6,
+		forks: 2,
+		languages: ["React", "Tailwind CSS"]
+	},
 ];
 
 const languageIcons = {
