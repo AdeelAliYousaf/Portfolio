@@ -333,6 +333,7 @@ export default function ModernChatbot() {
           borderBottomLeftRadius: '1.5rem',
           borderTopRightRadius: 0,
           borderBottomRightRadius: 0,
+          fontFamily: 'Poppins, sans-serif',
         }}
       >
         <div className={`bg-gray-900/95 backdrop-blur-xl rounded-l-2xl shadow-2xl border-l border-t border-b border-gray-700/50 overflow-hidden transition-all duration-300 h-full ${isOpen ? 'mobile-chat' : ''}`}> 
