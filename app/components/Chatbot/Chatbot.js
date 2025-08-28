@@ -98,8 +98,10 @@ export default function ModernChatbot() {
   useEffect(() => {
     if (!messages.length || !isOpen || !hasInteracted) return;
     const last = messages[messages.length - 1];
-    // Do not speak the predefined first message
-    const isDefaultWelcome = last.id === 1 && last.text && last.text.includes("JARVIS an AI Assistant created by Adeel Ali Yousaf");
+    // Do not speak the predefined first message (match both old and new variants)
+    const isDefaultWelcome = last.id === 1 && last.text && (
+      last.text.includes("JARVIS an AI Assistant trained by Adeel Ali Yousaf")
+    );
     if (last.from === 'bot' && last.text && last.id !== lastSpokenId.current && !isDefaultWelcome) {
       speakText(last.text);
       lastSpokenId.current = last.id;
