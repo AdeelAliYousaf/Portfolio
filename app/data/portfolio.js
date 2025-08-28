@@ -8,6 +8,7 @@ export const portfolio = {
         description:
           "A web application that showcases a dynamic product catalog for B2B clients, built with Laravel Breeze, Inertia.js, React.js, and Tailwind CSS.",
         url: "https://topinworldleather.com/",
+        company: "Top In World Leather",
         image: "/TIWLAnimation.gif",
         languages: ["Laravel", "React", "Tailwind CSS"],
       },
@@ -16,6 +17,7 @@ export const portfolio = {
         description:
           "A web application that showcases a modern product portfolio for a US-based client, built with Laravel Breeze, Inertia.js, React.js, and Tailwind CSS.",
         url: "https://veritasedgeglobal.com/",
+        company: "Veritas Edge Global",
         image: "/VEGAnimation.gif",
         languages: ["Laravel", "React", "Tailwind CSS"],
       },
@@ -87,6 +89,7 @@ export const portfolio = {
   education: [
     {
       id: 1,
+      year: "16 years of Education",
       degree: "Bachelors of Science in Computer Science",
       institution: "University of Sialkot",
       location: "Sialkot, Punjab, Pakistan",
@@ -113,6 +116,7 @@ export const portfolio = {
     },
     {
       id: 2,
+      year: "14 year of Education",
       degree: "Associate Degree in Computer Studies",
       institution: "University of Sialkot",
       location: "Sialkot, Punjab, Pakistan",

@@ -11,7 +11,7 @@ function getPortfolioContext() {
 
   Projects: ${[
     ...portfolio.projects.realClient.map(
-      (p) => `${p.title}: ${p.description}`
+      (p) => `${p.title}: ${p.description} for ${p.company} `
     ),
     ...portfolio.projects.openSource.map(
       (p) => `${p.name}: ${p.description}`
@@ -50,7 +50,7 @@ export async function POST(req) {
   const adilRegex = /\b(adil ali yousaf|adeel's brother|adeel ali yousaf's brother|adeel's mentor|adil yousaf|adil)\b/i;
   if (adilRegex.test(question)) {
     return NextResponse.json({
-      answer: "Adil Ali Yousaf is Adeel's elder brother, his mentor, and the person he respects a lot. Adeel looks up to him for guidance and inspiration. in my knowledge Adil is also an Software Engineer residing in Canada."
+      answer: "Adil Ali Yousaf is Adeel's elder brother, his mentor. Adeel looks up to him for guidance and inspiration. in my knowledge Adil is also an Software Engineer residing in Canada."
     });
   }
 

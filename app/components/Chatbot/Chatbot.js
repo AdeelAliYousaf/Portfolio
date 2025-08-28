@@ -71,7 +71,7 @@ export default function ModernChatbot() {
     { 
       id: 1,
       from: "bot", 
-      text: "👋 Hello! My name is JARVIS an AI Assistant created by Adeel Ali Yousaf to answer about his portfolio on his behalf. How can I help you?", 
+      text: "👋 Hello! My name is JARVIS an AI Assistant trained by Adeel Ali Yousaf to answer about his portfolio on his behalf. How can I help you?", 
       timestamp: new Date() 
     }
   ]);
