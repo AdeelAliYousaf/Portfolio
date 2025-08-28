@@ -359,6 +359,7 @@ export default function CmdTerminal({ onClose }) {
     );
   }
   // Default
+  if (!line && line !== 0) return <div key={key}>&nbsp;</div>;
   return <div key={key} className="whitespace-pre-wrap break-words">{line}</div>;
 }
 
