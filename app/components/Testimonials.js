@@ -2,16 +2,20 @@
 
 import React, { useEffect, useRef } from 'react';
 import { Quote } from 'lucide-react';
+import Image from 'next/image';
 
 const TestimonialCard = ({ testimonial }) => (
   <div className="flex-shrink-0 w-[100vw] sm:w-[500px] md:w-[380px] lg:w-[400px] bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-6 flex flex-col items-center text-center backdrop-blur-md transition-all duration-300 transform scale-95 hover:scale-100 mx-2">
-    <img
-      src={testimonial.image || `https://placehold.co/100x100/36454F/ffffff?text=${testimonial.name}`}
+    <Image
+      src={testimonial.image || `https://placehold.co/100x100/36454F/ffffff?text=${encodeURIComponent(testimonial.name)}`}
       alt={testimonial.name}
+      width={64}
+      height={64}
       className="w-16 h-16 rounded-full object-cover border-2 border-white/30 mb-4 shadow-inner"
+      unoptimized={testimonial.image?.startsWith('http')}
     />
     <Quote className="w-8 h-8 text-white/50 mb-3" />
-    <p className="text-sm sm:text-base text-white/90 font-light italic mb-4">"{testimonial.content}"</p>
+  <p className="text-sm sm:text-base text-white/90 font-light italic mb-4">&quot;{testimonial.content}&quot;</p>
     <h4 className="text-white font-semibold text-lg">{testimonial.name}</h4>
     {testimonial.company && <p className="text-white/60 text-xs">{testimonial.company}</p>}
   </div>
