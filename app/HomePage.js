@@ -94,33 +94,30 @@ export default function Home() {
       <AnimatePresence>
         {introStep < titles.length + 2 && (
           <>
+            {/* Cinematic bars: top and bottom, each covers 50vh, slide out to reveal center */}
             <motion.div
               key="letterbox-top"
-              initial={{ y: -120 }}
+              initial={{ y: 0 }}
               animate={{ y: 0 }}
-              exit={{
-                y: -120,
-                transition: { duration: 1.1, ease: "circInOut" },
-              }}
+              exit={{ y: -500, transition: { duration: 1.1, ease: "circInOut" } }}
               transition={{ duration: 1.1, delay: 0.1, ease: "circInOut" }}
-              className="fixed top-0 left-0 w-full h-20 bg-black z-[60] shadow-lg"
+              className="fixed top-0 left-0 w-full h-1/2 bg-black z-[60] shadow-lg"
+              style={{ height: '50vh' }}
             />
             <motion.div
               key="letterbox-bottom"
-              initial={{ y: 120 }}
+              initial={{ y: 0 }}
               animate={{ y: 0 }}
-              exit={{
-                y: 120,
-                transition: { duration: 1.1, ease: "circInOut" },
-              }}
+              exit={{ y: 500, transition: { duration: 1.1, ease: "circInOut" } }}
               transition={{ duration: 1.1, delay: 0.1, ease: "circInOut" }}
-              className="fixed bottom-0 left-0 w-full h-20 bg-black z-[60] shadow-lg"
+              className="fixed bottom-0 left-0 w-full h-1/2 bg-black z-[60] shadow-lg"
+              style={{ height: '50vh' }}
             />
           </>
         )}
       </AnimatePresence>
 
-      {/* Black intro overlay */}
+      {/* Black intro overlay (z-[70] to ensure above banners) */}
       <AnimatePresence>
         {introStep < titles.length + 2 && (
           <motion.div
@@ -128,7 +125,7 @@ export default function Home() {
             initial={{ opacity: 1 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0, transition: { duration: 1.2 } }}
-            className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black"
+            className="fixed inset-0 z-[70] flex flex-col items-center justify-center bg-transparent"
           >
             {/* Titles */}
             {introStep > 0 && introStep <= titles.length && (
@@ -162,6 +159,7 @@ export default function Home() {
                   style={{ userSelect: 'none' }}
                   width={576}
                   height={576}
+                  priority
                 />
               </motion.div>
             )}

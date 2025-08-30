@@ -70,9 +70,10 @@ export default function ModernChatbot() {
   // Hide chat button for 9 seconds after mount
   const [showChatButton, setShowChatButton] = useState(false);
   useEffect(() => {
-    const timer = setTimeout(() => setShowChatButton(true), 9000);
+    const timer = setTimeout(() => setShowChatButton(true), 7000);
     return () => clearTimeout(timer);
   }, []);
+
   const [messages, setMessages] = useState([
     { 
       id: 1,
@@ -327,7 +328,7 @@ export default function ModernChatbot() {
       {/* Simple Modern Rectangle Button (hidden for 9s after mount) */}
       {!isOpen && showChatButton && (
         <div
-          className="fixed z-[9999] chatbot-launcher flex items-center justify-center transition-all duration-500 ease-in-out"
+          className="fixed z-[9999] chatbot-launcher flex items-center justify-center chatbot-launcher-animate"
           style={{
             right: 0,
             top: '50%',
@@ -520,6 +521,13 @@ export default function ModernChatbot() {
       </div>
 
   <style jsx>{`
+        @keyframes chatbotLauncherIn {
+          from { opacity: 0; transform: translateY(-50%) translateX(60px); }
+          to { opacity: 1; transform: translateY(-50%) translateX(0); }
+        }
+        .chatbot-launcher-animate {
+          animation: chatbotLauncherIn 0.7s cubic-bezier(0.4,0,0.2,1);
+        }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
