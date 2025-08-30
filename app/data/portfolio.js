@@ -158,6 +158,13 @@ export const portfolio = {
 
     certificates: [
       {
+        title: "Oracle Certified 2025 Foundations Associate",
+        issuer: "Oracle",
+        date: "August 2025",
+        image: "/My Certifications/oraclefoundationsassociate.png",
+        url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=5ECC17D7369812419F485311BCBDC5482935CB67EC2F7A12575B2F4CABE8A4C9"
+      },
+      {
         title: "Foundational C# with Microsoft",
         issuer: "freeCodeCamp / Microsoft",
         date: "July 2025",
@@ -233,6 +240,13 @@ export const portfolio = {
         image: "/My Certifications/ciscointrotocybersecurity.png",
         url: "https://www.credly.com/badges/0d3308bc-e46b-43ec-a074-9885b5ec1ea4/public_url",
       },
+      {
+        title: "Oracle Certified Foundations Associate",
+        issuer: "Oracle",
+        date: "2025",
+        image: "/My Certifications/oraclefoundationsassociatebadge.jpeg",
+        url: "https://catalog-education.oracle.com/pls/certview/sharebadge?id=5ECC17D7369812419F485311BCBDC5482935CB67EC2F7A12575B2F4CABE8A4C9"
+      },
     ],
 
     internships: [
@@ -261,7 +275,7 @@ export const portfolio = {
   },
   socialLinks: {
     github: "https://github.com/AdeelAliYousaf",
-    linkedin: "https://www.linkedin.com/in/adeel-ali-yousaf-b10b87232",
+    linkedin: "https://www.linkedin.com/in/adeelaliyousaf",
     twitter: "https://twitter.com/AdeelAliYousaf",
     instagram: "https://www.instagram.com/adeelportfolio/",
     email: "adeelaliyousaf.dev@gmail.com",

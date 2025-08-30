@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
 import React, { useState, useRef, useEffect } from 'react';
+
+
 import { VolumeX } from "lucide-react";
-// Speech synthesis helpers
-// Speak with Google UK English voice if available, wait for voices to load if needed
 function speakText(text) {
   if (typeof window === 'undefined' || !window.speechSynthesis) return;
   window.speechSynthesis.cancel();
@@ -32,11 +32,11 @@ function speakText(text) {
   }
 }
 function renderMessageWithLinks(text) {
-  if (!text) return null;
+  if (!text && text !== 0) return <span>&nbsp;</span>;
   const urlRegex = /(https?:\/\/[\w\-._~:/?#[\]@!$&'()*+,;=%]+)|(www\.[\w\-._~:/?#[\]@!$&'()*+,;=%]+)/gi;
-  const parts = text.split(urlRegex);
+  const parts = String(text).split(urlRegex);
   return parts.map((part, i) => {
-    if (!part) return null;
+    if (!part && part !== 0) return <span key={i}>&nbsp;</span>;
     if (urlRegex.test(part)) {
       let url = part;
       if (!/^https?:\/\//i.test(url)) url = 'https://' + url;
@@ -67,6 +67,12 @@ async function fetchAnswer(question) {
 
 
 export default function ModernChatbot() {
+  // Hide chat button for 9 seconds after mount
+  const [showChatButton, setShowChatButton] = useState(false);
+  useEffect(() => {
+    const timer = setTimeout(() => setShowChatButton(true), 9000);
+    return () => clearTimeout(timer);
+  }, []);
   const [messages, setMessages] = useState([
     { 
       id: 1,
@@ -75,6 +81,21 @@ export default function ModernChatbot() {
       timestamp: new Date() 
     }
   ]);
+  // Hydration fix: control chatbot-anim-wrap className on client
+  const [hydrated, setHydrated] = useState(false);
+  useEffect(() => {
+    setHydrated(true);
+    const wrap = document.getElementById('chatbot-anim-wrap');
+    if (wrap) {
+      wrap.className = hydrated
+        ? 'transition-opacity duration-700 delay-100 opacity-100'
+        : 'opacity-0 pointer-events-none transition-opacity duration-700 delay-100';
+    }
+    // On unmount, reset
+    return () => {
+      if (wrap) wrap.className = 'opacity-0 pointer-events-none transition-opacity duration-700 delay-100';
+    };
+  }, [hydrated]);
   const [input, setInput] = useState("");
   const [isOpen, setIsOpen] = useState(false);
   const [isTyping, setIsTyping] = useState(false);
@@ -303,8 +324,8 @@ export default function ModernChatbot() {
 
   return (
     <>
-      {/* Simple Modern Rectangle Button */}
-      {!isOpen && (
+      {/* Simple Modern Rectangle Button (hidden for 9s after mount) */}
+      {!isOpen && showChatButton && (
         <div
           className="fixed z-[9999] chatbot-launcher flex items-center justify-center transition-all duration-500 ease-in-out"
           style={{

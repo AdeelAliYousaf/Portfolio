@@ -57,7 +57,7 @@ export default function RootLayout({children})
         {children}
           <CmdTerminalOverlay />
 
-        <div id="chatbot-anim-wrap" className="opacity-0 pointer-events-none transition-opacity duration-700 delay-100">
+        <div id="chatbot-anim-wrap">
           <Chatbot />
         </div>
       </body>

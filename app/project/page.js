@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { SiLaravel, SiReact, SiTailwindcss, SiPython, SiPhp, SiDotnet, SiMysql } from 'react-icons/si';
-
+import TestimonialSlider from "../components/Testimonials";
+import { portfolio } from '../data/portfolio';
 
 export const metadata = {
   metadataBase: new URL("https://adeelaliyousaf.vercel.app"),
@@ -13,7 +14,7 @@ export const metadata = {
   openGraph: {
     title: 'Projects | Adeel Ali Yousaf',
     description: 'Showcasing projects in web development and digital solutions',
-    url: 'https://adeelaliyousaf.thedev.id/project',
+    url: 'https://adeelaliyousaf.vercel.app/project',
     siteName: 'Adeel Ali Yousaf Portfolio',
 				images: [
 					{
@@ -42,87 +43,9 @@ export const metadata = {
   },
 };
 
-const projects = [
-	{
-		title: "Dynamic B2B Product Catalog Web Application",
-		description:
-			"A web application that showcases a dynamic product catalog for B2B clients, built with Laravel Breeze, inertia js, React js and Tailwind CSS.",
-		url: "https://topinworldleather.com/",
-		image: "/TIWLAnimation.gif",
-		languages: ["Laravel", "React", "Tailwind CSS"]
-	},
-	{
-		title: "Modern Product Portfolio Web Application",
-		description:
-			"A web application that showcases a modern product portfolio for a US-based client, built with Laravel Breeze, inertia js, React js and Tailwind CSS.",
-		url: "https://veritasedgeglobal.com/",
-		image: "/VEGAnimation.gif",
-		languages: ["Laravel", "React", "Tailwind CSS"]
-	},
-];
 
-const githubProjects = [
-	{
-		repo: "AdeelAliYousaf/TheSmartWebCam",
-		url: "https://github.com/AdeelAliYousaf/TheSmartWebCam",
-		name: "The Smart WebCam",
-		description:
-			"Face Attendance System Made in Python using OpenCV and Deep Learning and Sending realtime emails to the logged in Admin using SendGrid.",
-		stars: 2,
-		forks: 45,
-		languages: ["Python"]
-	},
-	{
-		repo: "AdeelAliYousaf/ViolenceDetectionSystem",
-		url: "https://github.com/AdeelAliYousaf/ViolenceDetectionSystem",
-		name: "Violence Detection System",
-		description:
-			"A project that uses machine learning to detect violence in videos with Web UI interface using Gradio.",
-		stars: 8,
-		forks: 12,
-		languages: ["Python"]
-	},
-  {
-		repo: "AdeelAliYousaf/webrtc-app",
-		url: "https://github.com/AdeelAliYousaf/webrtc-app",
-		name: "WebRTC Web App",
-		description:
-			"A basic WebRTC-based application for real-time communication. using React JS for Frontend and PHP at backend. also used Turn Server for firewall",
-		stars: 12,
-		forks: 5,
-		languages: ["React", "PHP"]
-	},
-  {
-		repo: "AdeelAliYousaf/LearningManagementSystem",
-		url: "https://github.com/AdeelAliYousaf/LearningManagementSystem",
-		name: "Learning Management System",
-		description:
-			"A LMS Dynamic Web Application made with ASP.NET Core MVC using C# and MSSQL Server. with Admin, Teacher and Student Dashboard.",
-		stars: 15,
-		forks: 24,
-		languages: ["ASP.NET", "C#", "MySQL"]
-	},
-  {
-		repo: "AdeelAliYousaf/FinalYearProjectManagementSystem",
-		url: "https://github.com/AdeelAliYousaf/FinalYearProjectManagement",
-		name: "Final Year Project Management System",
-		description:
-			"A Dynamic Project Management System for Final Year. This Web Application made with core PHP and MySQL. with Admin, Teacher and Student Dashboard.",
-		stars: 6,
-		forks: 2,
-		languages: ["PHP", "MySQL"]
-	},
-	{
-		repo: "AdeelAliYousaf/usktgpacalculator",
-		url: "https://github.com/AdeelAliYousaf/usktgpacalculator",
-		name: "GPA Calculator Specifically designed for University of Sialkot's Students",
-		description:
-			"A Static Smart GPA Calculator for University of Sialkot Students. This Website is made with React JS & Tailwindcss using Smart Logics for Course Repeatations.",
-		stars: 6,
-		forks: 2,
-		languages: ["React", "Tailwind CSS"]
-	},
-];
+const projects = portfolio.projects.realClient;
+const githubProjects = portfolio.projects.openSource;
 
 const languageIcons = {
   Laravel: <SiLaravel title="Laravel" color="#ff2d20" size={20} />,
@@ -139,9 +62,9 @@ export default function ProjectsPage() {
 		return (
 			<div className="mt-2 mb-16 min-h-screen flex flex-col items-center justify-center py-10 px-4">
 				<h1 className="text-4xl md:text-6xl font-bold text-white mb-12 text-center">
-					Projects Portfolio
+					Projects Portfolio & Testimonials
 				</h1>
-
+				
 				{/* Live Projects Section */}
 				<h2 className="text-2xl font-bold text-white mb-6 mt-2 w-full text-center max-w-6xl">Client Projects</h2>
 				<div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl mb-14">
@@ -200,7 +123,7 @@ export default function ProjectsPage() {
 						</div>
 					))}
 				</div>
-
+				<TestimonialSlider />
 				{/* GitHub Projects Section */}
 				<h2 className="text-2xl font-bold text-white mb-6 mt-2 w-full text-center max-w-6xl">Open-Source Projects</h2>
 				<div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-6xl">

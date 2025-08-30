@@ -1,50 +1,13 @@
 "use client";
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Award, MapPin, Clock } from 'lucide-react';
 import ZoomImage from './ZoomImage';
+import { portfolio } from '../data/portfolio';
 
 const EducationTimeline = () => {
   const [visibleItems, setVisibleItems] = useState(new Set());
   const [mounted, setMounted] = useState(false);
-
-  const educationData = useMemo(() => ([
-    {
-      id: 1,
-      degree: "Bachelors of Science in Computer Science",
-      institution: "University of Sialkot",
-      location: "Sialkot, Punjab, Pakistan",
-      duration: "2024 - 2026",
-      gpa: "Currently 2 .72/4.0",
-      status: "Ongoing",
-      specialization: "Computer Science",
-      achievements: [
-        "Created a Learning Management System using ASP.NET Core MVC",
-        "Created a mobile application for local businesses"
-      ],
-      skills: [
-        "Python", "TensorFlow", "Deep Learning", "Research", "Data Science",
-        "ASP.NET Core MVC", "Mobile Application Development", "React", "Node.js",
-        "Software Engineering", "Operating Systems"
-      ],
-      color: "from-blue-500 to-purple-600"
-    },
-    {
-      id: 2,
-      degree: "Associate Degree in Computer Studies",
-      institution: "University of Sialkot",
-      location: "Sialkot, Punjab, Pakistan",
-      duration: "2022 - 2024",
-      gpa: "2 .96/4.0",
-      status: "Completed",
-      specialization: "Computer Science",
-      achievements: [
-        "Created Face Attendance System",
-        "Created a web application for managing students Final Year Project records"
-      ],
-      skills: ["JavaScript", "C++", "Python", "System Design", "Software Engineering", "Docker"],
-      color: "from-green-500 to-blue-500"
-    }
-  ]), []);
+  const educationData = portfolio.education;
 
   useEffect(() => {
     setMounted(true);
