@@ -35,6 +35,10 @@ export function BottomMenu() {
               <button
                 className="w-full h-16 flex items-center justify-center z-10"
                 onClick={() => {
+                  // Play ThankYou.mp3 sound
+                  const audio = new Audio('/ThankYou.mp3');
+                  audio.play();
+                  // Download CV
                   const link = document.createElement('a');
                   link.href = menu.href;
                   link.download = '';
@@ -52,6 +56,7 @@ export function BottomMenu() {
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 >
                   <menu.icon size={24} />
+                  <span className="sr-only">Download CV</span>
                 </motion.span>
               </button>
             ) : (
@@ -92,6 +97,10 @@ export function SidebarMenu() {
               <button
                 className="w-12 h-12 flex items-center justify-center z-10"
                 onClick={() => {
+                  // Play ThankYou.mp3 sound
+                  const audio = new Audio('/ThankYou.mp3');
+                  audio.play();
+                  // Download CV
                   const link = document.createElement('a');
                   link.href = menu.href;
                   link.download = '';
@@ -108,6 +117,7 @@ export function SidebarMenu() {
                   transition={{ type: 'spring', stiffness: 400, damping: 30 }}
                 >
                   {menu.icon && <menu.icon size={24} />}
+                  <span className="sr-only">Download CV</span>
                 </motion.span>
               </button>
             ) : (
