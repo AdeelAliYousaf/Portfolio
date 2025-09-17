@@ -10,6 +10,7 @@ export default function RootLayout({children}) {
       <head>
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#6366f1" />
+        <meta name="google-site-verification" content="2spy_qQ5WvNCuEbStJPT7bL3Auv_IZHF-jUfEYyA0Jw" />
       </head>
       <body className="antialiased flex flex-col">
         <ClientRoot>{children}</ClientRoot>
