@@ -34,6 +34,16 @@ export const portfolio = {
         languages: ["Python"],
       },
       {
+        repo: "AdeelAliYousaf/StreamlitAdminChatbot",
+        url: "https://github.com/AdeelAliYousaf/StreamlitAdminChatbot",
+        name: "RAG Based Streamlit Admin Chatbot",
+        description:
+          "Admin CRUD chatbot built with Streamlit and Gemini API for real-time assistance.",
+        stars: 10,
+        forks: 0,
+        languages: ["Python"],
+      },
+      {
         repo: "AdeelAliYousaf/ViolenceDetectionSystem",
         url: "https://github.com/AdeelAliYousaf/ViolenceDetectionSystem",
         name: "Violence Detection System",

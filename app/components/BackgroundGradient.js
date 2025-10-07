@@ -2,8 +2,8 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 // const Prism = dynamic(() => import("./Backgrounds/Prism/Prism"), { ssr: false });
-const Prism = dynamic(() => import("./Backgrounds/Prism/Prism"), { ssr: false });
-const Plasma = dynamic(() => import("./Backgrounds/Space/Plasma"), { ssr: false });
+import Plasma from "./Backgrounds/Plasma/Plasma";
+const Space = dynamic(() => import("./Backgrounds/Space/Plasma"), { ssr: false });
 
 export default function BackgroundGradient() {
   const [isMobile, setIsMobile] = useState(false);
@@ -18,7 +18,7 @@ export default function BackgroundGradient() {
   return (
     <div className="fixed inset-0 -z-10 w-full h-full">
       {isMobile ? (
-        <Plasma
+        <Space
           color="#ff6b35"
           speed={0.6}
           direction="forward"
@@ -27,22 +27,30 @@ export default function BackgroundGradient() {
           mouseInteractive={true}
         />
       ) : (
-        <Prism
-          height={3.5}
-          baseWidth={5.5}
-          animationType="rotate"
-          glow={1}
-          offset={{ x: 0, y: 0 }}
-          noise={0.5}
-          transparent={true}
-          scale={3.6}
-          hueShift={0}
-          colorFrequency={1}
-          hoverStrength={2}
-          inertia={0.05}
-          bloom={1}
-          suspendWhenOffscreen={false}
-          timeScale={0.5}
+        // <Prism
+        //   height={3.5}
+        //   baseWidth={5.5}
+        //   animationType="rotate"
+        //   glow={1}
+        //   offset={{ x: 0, y: 0 }}
+        //   noise={0.5}
+        //   transparent={true}
+        //   scale={3.6}
+        //   hueShift={0}
+        //   colorFrequency={1}
+        //   hoverStrength={2}
+        //   inertia={0.05}
+        //   bloom={1}
+        //   suspendWhenOffscreen={false}
+        //   timeScale={0.5}
+        // />
+        <Plasma
+          color="#6DE3EE"
+          speed={0.6}
+          direction="forward"
+          scale={2.1}
+          opacity={0.5}
+          mouseInteractive={false}
         />
       )}
     </div>
