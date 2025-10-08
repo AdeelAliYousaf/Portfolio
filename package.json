@@ -9,14 +9,13 @@
     "lint": "eslint",
     "deploy": "gh-pages -d out",
     "post-build": "next-sitemap"
-    
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
     "@fontsource/inter": "^5.2.6",
     "@fontsource/montserrat": "^5.2.6",
     "@fontsource/roboto": "^5.2.6",
-    "@react-three/drei": "^10.7.4",
+    "@react-three/drei": "^10.7.6",
     "@react-three/fiber": "^9.3.0",
     "@react-three/rapier": "^2.1.0",
     "framer-motion": "^12.23.12",

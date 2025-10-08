@@ -339,8 +339,15 @@ export default function ModernChatbot() {
         >
           <button
             onClick={() => setIsOpen(true)}
-            className="group relative bg-gradient-to-br from-orange-500 via-red-600 to-purple-700 text-white rounded-l-2xl shadow-lg border border-white/20 backdrop-blur-xl focus:outline-none focus:ring-2 focus:ring-orange-500/50 active:scale-95 px-2 py-4 opacity-60 hover:opacity-90 w-10 min-w-[40px] max-w-[44px] h-20 sm:h-16 md:h-24 lg:h-28 flex items-center justify-center"
-            style={{ borderTopRightRadius: 0, borderBottomRightRadius: 0 }}
+            className="group relative text-white rounded-l-2xl shadow-lg border border-white/30 focus:outline-none focus:ring-2 focus:ring-orange-500/50 active:scale-95 px-2 py-4 opacity-80 hover:opacity-100 w-10 min-w-[40px] max-w-[44px] h-20 sm:h-16 md:h-24 lg:h-28 flex items-center justify-center liquid-glass-chatbot overflow-hidden"
+            style={{ 
+              borderTopRightRadius: 0, 
+              borderBottomRightRadius: 0,
+              background: 'linear-gradient(135deg, rgba(255,100,50,0.15), rgba(150,50,200,0.1)), rgba(255,255,255,0.08)',
+              backdropFilter: 'blur(60px) saturate(180%)',
+              WebkitBackdropFilter: 'blur(60px) saturate(180%)',
+              boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.4), inset 0 -1px 1px rgba(0,0,0,0.1), 0 20px 40px rgba(0,0,0,0.3)'
+            }}
             aria-label="Open Chatbot"
           >
             <MessageCircle className="w-5 h-5 group-hover:scale-110 transition-transform duration-200" />
@@ -527,6 +534,80 @@ export default function ModernChatbot() {
         }
         .chatbot-launcher-animate {
           animation: chatbotLauncherIn 0.7s cubic-bezier(0.4,0,0.2,1);
+        }
+        
+        .liquid-glass-chatbot {
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .liquid-glass-chatbot::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          right: -50%;
+          bottom: -50%;
+          background: conic-gradient(from 0deg at 50% 50%, 
+            rgba(255,150,100,0.4) 0deg, 
+            rgba(255,100,150,0.2) 90deg, 
+            rgba(200,100,255,0.5) 180deg, 
+            rgba(255,50,100,0.1) 270deg, 
+            rgba(255,150,100,0.4) 360deg);
+          border-radius: inherit;
+          z-index: -1;
+          animation: liquidRotateChatbot 8s linear infinite, liquidPulseChatbot 4s ease-in-out infinite alternate;
+        }
+        
+        .liquid-glass-chatbot::after {
+          content: '';
+          position: absolute;
+          inset: 0;
+          background: 
+            radial-gradient(ellipse 180% 120% at 20% 10%, rgba(255,200,100,0.3) 0%, transparent 45%),
+            radial-gradient(ellipse 140% 90% at 80% 80%, rgba(255,100,200,0.25) 0%, transparent 55%),
+            linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 35%, rgba(255,150,100,0.1) 100%);
+          border-radius: inherit;
+          pointer-events: none;
+          animation: liquidWaveChatbot 5s ease-in-out infinite, liquidFlowChatbot 10s ease-in-out infinite;
+        }
+        
+        @keyframes liquidRotateChatbot {
+          0% { transform: rotate(0deg) scale(1); }
+          100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        @keyframes liquidPulseChatbot {
+          0% { opacity: 0.7; }
+          100% { opacity: 1; }
+        }
+        
+        @keyframes liquidWaveChatbot {
+          0%, 100% { 
+            background: 
+              radial-gradient(ellipse 180% 120% at 20% 10%, rgba(255,200,100,0.3) 0%, transparent 45%),
+              radial-gradient(ellipse 140% 90% at 80% 80%, rgba(255,100,200,0.25) 0%, transparent 55%),
+              linear-gradient(135deg, rgba(255,255,255,0.15) 0%, transparent 35%, rgba(255,150,100,0.1) 100%);
+          }
+          33% { 
+            background: 
+              radial-gradient(ellipse 200% 100% at 70% 20%, rgba(255,150,200,0.35) 0%, transparent 50%),
+              radial-gradient(ellipse 120% 100% at 30% 70%, rgba(200,100,255,0.3) 0%, transparent 60%),
+              linear-gradient(45deg, rgba(255,255,255,0.18) 0%, transparent 30%, rgba(255,100,150,0.08) 100%);
+          }
+          66% { 
+            background: 
+              radial-gradient(ellipse 160% 140% at 90% 30%, rgba(255,100,100,0.28) 0%, transparent 55%),
+              radial-gradient(ellipse 180% 80% at 10% 60%, rgba(255,200,150,0.22) 0%, transparent 50%),
+              linear-gradient(225deg, rgba(255,255,255,0.12) 0%, transparent 40%, rgba(200,150,255,0.15) 100%);
+          }
+        }
+        
+        @keyframes liquidFlowChatbot {
+          0%, 100% { transform: translateX(0) translateY(0) scale(1); }
+          25% { transform: translateX(1px) translateY(-2px) scale(1.03); }
+          50% { transform: translateX(-2px) translateY(1px) scale(0.97); }
+          75% { transform: translateX(-1px) translateY(-1px) scale(1.02); }
         }
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(10px); }

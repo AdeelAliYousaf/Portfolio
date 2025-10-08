@@ -13,6 +13,7 @@ export default function Home() {
   const roles = [
     "Full Stack Software Engineer",
     "Machine Learning Engineer",
+    "Computer Scientist",
   ];
   const [roleIndex, setRoleIndex] = useState(0);
   useEffect(() => {
@@ -25,8 +26,8 @@ export default function Home() {
 
   const titles = [
     "Software Engineer",
-    "Full Stack Developer",
     "Machine Learning Engineer",
+    "Computer Scientist",
   ];
 
   // --- Intro logic: only skip on client-side navigation, not reload ---
@@ -185,7 +186,7 @@ export default function Home() {
               <div className="flex flex-1 items-start justify-center w-full h-full">
                 <div className="w-full max-w-[900px] h-[600px] md:max-w-screen md:h-screen md:overflow-y-hidden flex items-center justify-center">
                   {/* <LanyardModel /> */}
-                  <Lanyard position={[0, 0, 20]} gravity={[0, -40, 0]} />
+                  <Lanyard position={[0, 0, 20]} gravity={[0, -20, 0]} />
                 </div>
               </div>
             </header>

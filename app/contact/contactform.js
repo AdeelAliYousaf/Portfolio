@@ -7,10 +7,10 @@ import { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_PUBLIC_KEY } from "./e
 // ...existing code...
 
 const socialLinks = [
-  { icon: <FaLinkedin className="w-6 h-6" />, label: "LinkedIn", url: "https://www.linkedin.com/in/adeel-ali-yousaf-b10b87232", color: "text-blue-500 hover:text-blue-400" },
-  { icon: <FaGithub className="w-6 h-6" />, label: "GitHub", url: "https://github.com/AdeelAliYousaf", color: "text-gray-300 hover:text-white" },
-  { icon: <FaInstagram className="w-6 h-6" />, label: "Instagram", url: "https://instagram.com/adeelportfolio", color: "text-pink-400 hover:text-pink-300" },
-  { icon: <FaFacebook className="w-6 h-6" />, label: "Facebook", url: "https://facebook.com/adeelstopshate", color: "text-blue-600 hover:text-blue-500" },
+  { icon: <FaLinkedin className="w-5 h-5 sm:w-6 sm:h-6" />, label: "LinkedIn", url: "https://www.linkedin.com/in/adeelaliyousaf", color: "text-blue-500 hover:text-blue-400" },
+  { icon: <FaGithub className="w-5 h-5 sm:w-6 sm:h-6" />, label: "GitHub", url: "https://github.com/AdeelAliYousaf", color: "text-gray-300 hover:text-white" },
+  { icon: <FaInstagram className="w-5 h-5 sm:w-6 sm:h-6" />, label: "Instagram", url: "https://instagram.com/adeelportfolio", color: "text-pink-400 hover:text-pink-300" },
+  { icon: <FaFacebook className="w-5 h-5 sm:w-6 sm:h-6" />, label: "Facebook", url: "https://facebook.com/adeelstopshate", color: "text-blue-600 hover:text-blue-500" },
 ];
 
 // ...existing code...
@@ -206,18 +206,20 @@ export default function ModernContactPage() {
                 <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                 Connect With Me
               </h2>
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
                 {socialLinks.map((link, i) => (
                   <a
                     key={i}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`${link.color} p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 flex items-center justify-center group hover:scale-105 hover:shadow-lg border border-white/5 hover:border-white/20`}
+                    className={`${link.color} p-3 sm:p-4 rounded-2xl bg-white/5 hover:bg-white/10 transition-all duration-300 flex items-center justify-start sm:justify-center group hover:scale-105 hover:shadow-lg border border-white/5 hover:border-white/20`}
                     aria-label={link.label}
                   >
-                    {link.icon}
-                    <span className="ml-3 text-sm font-medium">{link.label}</span>
+                    <div className="flex items-center gap-3">
+                      {link.icon}
+                      <span className="text-sm sm:text-base font-medium">{link.label}</span>
+                    </div>
                   </a>
                 ))}
               </div>
@@ -230,14 +232,11 @@ export default function ModernContactPage() {
               <div className="h-64 relative">
                 <iframe
                   title="Sialkot, Pakistan"
-                  src="https://www.openstreetmap.org/export/embed.html?bbox=74.495%2C32.475%2C74.555%2C32.535&layer=mapnik"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107699.22030302057!2d74.4599965885885!3d32.48337210613782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eea5674db6cfd%3A0xa8d03983946d4744!2sSialkot%2C%20Pakistan!5e0!3m2!1sen!2s!4v1759957657143!5m2!1sen!2s"
                   className="w-full h-full border-0"
                   allowFullScreen=""
                   loading="lazy"
                 />
-                <div className="absolute top-4 left-4 bg-black/80 text-white px-3 py-1 rounded-full text-sm">
-                  📍 Sialkot, Pakistan
-                </div>
               </div>
             </div>
           </div>
