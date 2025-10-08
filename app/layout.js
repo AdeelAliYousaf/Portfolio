@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Poppins } from 'next/font/google';
 import ClientRoot from "./ClientRoot";
+import { IntroProvider } from "./context/IntroContext";
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
@@ -13,7 +14,9 @@ export default function RootLayout({children}) {
         <meta name="google-site-verification" content="2spy_qQ5WvNCuEbStJPT7bL3Auv_IZHF-jUfEYyA0Jw" />
       </head>
       <body className="antialiased flex flex-col">
-        <ClientRoot>{children}</ClientRoot>
+        <IntroProvider>
+          <ClientRoot>{children}</ClientRoot>
+        </IntroProvider>
       </body>
     </html>
   );

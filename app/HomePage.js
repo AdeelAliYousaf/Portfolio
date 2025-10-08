@@ -8,8 +8,10 @@ import "@fontsource/montserrat/700.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/inter/400.css";
 import Lanyard from "./components/Components/Lanyard/Lanyard";
+import { useIntro } from "./context/IntroContext";
 
 export default function Home() {
+  const { setIsIntroComplete } = useIntro();
   const roles = [
     "Full Stack Software Engineer",
     "Machine Learning Engineer",
@@ -30,50 +32,33 @@ export default function Home() {
     "Computer Scientist",
   ];
 
-  // --- Intro logic: only skip on client-side navigation, not reload ---
-  const [introStep, setIntroStep] = useState(() => {
-    if (typeof window !== "undefined" && sessionStorage.getItem("skipIntro")) {
-      return titles.length + 3;
-    }
-    return 0;
-  });
+  // --- Intro logic: always start from beginning ---
+  const [introStep, setIntroStep] = useState(0);
+  
 
-  // Clear skipIntro on reload (so intro shows on reload)
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener("beforeunload", () => {
-        sessionStorage.removeItem("skipIntro");
-      });
-    }
-  }, []);
 
   useEffect(() => {
+    // Auto-progress through titles and continue to main content
     if (introStep < titles.length + 3) {
       let delay = 1200;
       if (introStep === 0) delay = 900;
       if (introStep === 1) delay = 900;
       if (introStep === titles.length) delay = 1200; 
-      if (introStep === titles.length + 1) delay = 1500; 
+      if (introStep === titles.length + 1) delay = 2000; // Show logo for 2 seconds before proceeding
       const timeout = setTimeout(() => {
         setIntroStep((prev) => prev + 1);
+        // Enable video when proceeding to main content
+        if (introStep === titles.length + 1) {
+          setIsIntroComplete(true);
+        }
       }, delay);
       return () => clearTimeout(timeout);
-    } else if (introStep === titles.length + 3) {
-      if (typeof window !== "undefined") {
-        sessionStorage.setItem("skipIntro", "1");
-      }
     }
-  }, [introStep, titles.length]);
+  }, [introStep, titles.length, setIsIntroComplete]);
 
-  // Lens flare sweep for logo
-  const [flare, setFlare] = useState(false);
-  useEffect(() => {
-    if (introStep === titles.length + 1) {
-      setFlare(true);
-      const t = setTimeout(() => setFlare(false), 1200);
-      return () => clearTimeout(t);
-    }
-  }, [introStep, titles.length]);
+
+
+
 
   return (
     <div className="flex flex-col items-center justify-center text-white font-['Roboto'] relative overflow-hidden">
@@ -142,7 +127,7 @@ export default function Home() {
               </motion.h2>
             )}
 
-            {/* Logo */}
+            {/* Logo with Entry Button */}
             {introStep === titles.length + 1 && (
               <motion.div
                 key="logo-reveal"
@@ -150,18 +135,22 @@ export default function Home() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 1.2 }}
                 transition={{ duration: 1 }}
-                className="flex flex-col items-center relative"
+                className="flex flex-col items-center relative gap-12"
               >
-                <Image
-                  src="/Logo.png"
-                  alt="Logo"
-                  className="w-[36rem] h-[36rem] md:w-[36rem] md:h-[36rem] object-contain drop-shadow-2xl"
-                  draggable={false}
-                  style={{ userSelect: 'none' }}
-                  width={576}
-                  height={576}
-                  priority
-                />
+                <div className="relative">
+                  <Image
+                    src="/Logo.png"
+                    alt="Logo"
+                    className="w-[36rem] h-[36rem] md:w-[36rem] md:h-[36rem] object-contain drop-shadow-2xl"
+                    draggable={false}
+                    style={{ userSelect: 'none' }}
+                    width={576}
+                    height={576}
+                    priority
+                  />
+                </div>
+                
+
               </motion.div>
             )}
           </motion.div>

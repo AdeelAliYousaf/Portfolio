@@ -8,8 +8,10 @@ import { SidebarMenu, BottomMenu } from "./components/Menu";
 import Image from "next/image";
 
 import { useEffect } from "react";
+import { useIntro } from "./context/IntroContext";
 
 export default function ClientRoot({ children }) {
+  const { isIntroComplete } = useIntro();
   useEffect(() => {
     const logo = document.getElementById("adeel-logo");
     if (logo) {
@@ -25,7 +27,7 @@ export default function ClientRoot({ children }) {
   return (
     <>
       <PwaRegister />
-      <BackgroundGradient />
+      <BackgroundGradient enableVideo={isIntroComplete} />
       <div className="flex justify-center items-center">
         <Image
           id="adeel-logo"

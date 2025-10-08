@@ -66,7 +66,7 @@ export function BottomMenu() {
             }}
           >
             <Menu size={20} className="text-white/80" />
-            <span className="text-white/80 text-sm font-medium">Menu</span>
+            <span className="text-white/80 text-sm font-medium">Navigations</span>
           </motion.button>
         ) : (
           <motion.div
@@ -78,7 +78,7 @@ export function BottomMenu() {
             className="relative"
           >
             <ul
-              className="flex items-center bottom-[-1rem] justify-center py-1 px-2 rounded-full border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] relative liquid-glass-bottom overflow-visible"
+              className="flex items-center justify-center py-1 px-2 rounded-full border border-white/20 shadow-[0_8px_32px_0_rgba(0,0,0,0.37)] relative liquid-glass-bottom overflow-visible"
               style={{ background: 'rgba(255,255,255,0.08)', backdropFilter: 'blur(60px) saturate(180%)', WebkitBackdropFilter: 'blur(60px) saturate(180%)', boxShadow: 'inset 0 1px 1px rgba(255,255,255,0.4), inset 0 -1px 1px rgba(0,0,0,0.1), 0 20px 40px rgba(0,0,0,0.3)' }}>
               {menuItems.map((menu, i) => (
                 <motion.li 
