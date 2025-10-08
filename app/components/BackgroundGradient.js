@@ -148,7 +148,7 @@ export default function BackgroundGradient({ enableVideo = true }) {
         video.removeEventListener('canplay', androidPlayHandler);
       };
     }
-  }, [isMobile, enableVideo, isIOS]);
+  }, [isMobile, enableVideo, isIOS, userInteracted]);
 
   return (
     <div className="fixed inset-0 -z-10 w-full h-full">

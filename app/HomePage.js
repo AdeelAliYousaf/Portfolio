@@ -3,12 +3,15 @@
 import Image from "next/image";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "@fontsource/montserrat/700.css";
 import "@fontsource/roboto/400.css";
 import "@fontsource/inter/400.css";
 import Lanyard from "./components/Components/Lanyard/Lanyard";
 import { useIntro } from "./context/IntroContext";
+
+// Module-level variable to track intro across component lifecycles
+let hasShownIntro = false;
 
 export default function Home() {
   const { setIsIntroComplete } = useIntro();
@@ -32,12 +35,25 @@ export default function Home() {
     "Computer Scientist",
   ];
 
-  // --- Intro logic: always start from beginning ---
-  const [introStep, setIntroStep] = useState(0);
-  
+  // --- Intro logic: show once per session, reset on page reload ---
+  const [introStep, setIntroStep] = useState(() => {
+    // If intro was already shown in this browser session, skip it
+    return hasShownIntro ? titles.length + 3 : 0;
+  });
+  const [showIntro, setShowIntro] = useState(() => !hasShownIntro);
 
-
+  // Handle intro logic on mount
   useEffect(() => {
+    // If intro was already shown, enable video immediately
+    if (hasShownIntro) {
+      setIsIntroComplete(true);
+    }
+  }, [setIsIntroComplete]);
+
+  // Handle intro progression
+  useEffect(() => {
+    if (!showIntro || hasShownIntro) return;
+
     // Auto-progress through titles and continue to main content
     if (introStep < titles.length + 3) {
       let delay = 1200;
@@ -45,16 +61,19 @@ export default function Home() {
       if (introStep === 1) delay = 900;
       if (introStep === titles.length) delay = 1200; 
       if (introStep === titles.length + 1) delay = 2000; // Show logo for 2 seconds before proceeding
+      
       const timeout = setTimeout(() => {
         setIntroStep((prev) => prev + 1);
         // Enable video when proceeding to main content
         if (introStep === titles.length + 1) {
           setIsIntroComplete(true);
+          // Mark intro as shown for this browser session
+          hasShownIntro = true;
         }
       }, delay);
       return () => clearTimeout(timeout);
     }
-  }, [introStep, titles.length, setIsIntroComplete]);
+  }, [introStep, titles.length, setIsIntroComplete, showIntro]);
 
 
 
@@ -78,7 +97,7 @@ export default function Home() {
 
       {/* Cinematic letterbox bars */}
       <AnimatePresence>
-        {introStep < titles.length + 2 && (
+        {showIntro && introStep < titles.length + 2 && (
           <>
             {/* Cinematic bars: top and bottom, each covers 50vh, slide out to reveal center */}
             <motion.div
@@ -105,7 +124,7 @@ export default function Home() {
 
       {/* Black intro overlay (z-[70] to ensure above banners) */}
       <AnimatePresence>
-        {introStep < titles.length + 2 && (
+        {showIntro && introStep < titles.length + 2 && (
           <motion.div
             key="intro-black"
             initial={{ opacity: 1 }}
