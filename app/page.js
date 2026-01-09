@@ -3,7 +3,7 @@ import Home from "./HomePage";
 // Home page metadata for SEO and social sharing
 export const metadata = {
   metadataBase: new URL("https://adeelaliyousaf.vercel.app"),
-  title: "Adeel Ali Yousaf | Portfolio 2025 | Software Engineer & Full Stack Developer",
+  title: "Adeel Ali Yousaf | Portfolio 2026 | Software Engineer & Full Stack Developer",
   description:
     "Welcome to the portfolio of Adeel Ali Yousaf, a passionate Software Engineer and Full Stack Developer. Explore projects, education, certifications, and contact details. Modern, animated, mobile-first, and PWA-ready.",
   keywords: [
@@ -27,17 +27,17 @@ export const metadata = {
   authors: [{ name: "Adeel Ali Yousaf", url: "https://adeelaliyousaf.vercel.app" }],
   creator: "Adeel Ali Yousaf",
   openGraph: {
-    title: "Adeel Ali Yousaf | Portfolio 2025",
+    title: "Adeel Ali Yousaf | Portfolio 2026",
     description:
       "Explore the modern, animated portfolio of Adeel Ali Yousaf, Software Engineer & Full Stack Developer. View projects, certifications, and contact info.",
     url: "https://adeelaliyousaf.vercel.app",
-    siteName: "Adeel Ali Yousaf Portfolio 2025",
+    siteName: "Adeel Ali Yousaf Portfolio 2026",
     images: [
       {
         url: "/LogoDark.png",
         width: 1200,
         height: 630,
-        alt: "Adeel Ali Yousaf Portfolio 2025"
+        alt: "Adeel Ali Yousaf Portfolio 2026"
       }
     ],
     locale: "en_US",
@@ -45,15 +45,15 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Adeel Ali Yousaf | Portfolio 2025",
+    title: "Adeel Ali Yousaf | Portfolio 2026",
     description:
       "Explore the modern, animated portfolio of Adeel Ali Yousaf, Software Engineer & Full Stack Developer. View projects, certifications, and contact info.",
     site: "@adeelaliyousaf", // Replace with your Twitter handle
     creator: "@adeelaliyousaf", // Replace with your Twitter handle
     images: [
       {
-        url: "/Adeel.jpg", // Replace with your Twitter OG image path
-        alt: "Adeel Ali Yousaf Portfolio 2025"
+        url: "/Adeel.jpeg", // Replace with your Twitter OG image path
+        alt: "Adeel Ali Yousaf Portfolio 2026"
       }
     ]
   },
