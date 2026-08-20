@@ -1,0 +1,64 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--paper);
+  border-bottom: 4px solid var(--ink);
+}
+.navWrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem clamp(1.1rem, 4vw, 2.5rem);
+}
+
+.brand { display: flex; align-items: center; gap: 0.6rem; text-decoration: none; }
+.brandBadge { width: 42px; height: 42px; flex: 0 0 auto; }
+.brandName { font-family: var(--font-display-stack); font-size: 1.35rem; letter-spacing: 0.5px; }
+.brandName small {
+  display: block; font-family: var(--font-hand-stack); font-size: 0.62rem;
+  color: var(--red); letter-spacing: 0.5px; margin-top: -2px;
+}
+
+.navLinks { display: flex; gap: 1.6rem; list-style: none; margin: 0; padding: 0; }
+.navLinks a {
+  font-family: var(--font-body-stack); font-weight: 700; text-transform: uppercase;
+  font-size: 0.85rem; letter-spacing: 0.4px; text-decoration: none;
+  position: relative; padding: 0.3rem 0;
+}
+.navLinks a::after {
+  content: ""; position: absolute; left: 0; bottom: -3px; height: 4px; width: 0;
+  background: var(--red); transition: width 0.25s ease; border-radius: 2px;
+}
+.navLinks a:hover::after, .navLinks a.active::after { width: 100%; }
+.navLinks a.active { color: var(--red); }
+
+.navToggle {
+  display: none; background: var(--yellow); border: 3px solid var(--ink);
+  border-radius: 8px; box-shadow: 3px 3px 0 var(--ink);
+  width: 46px; height: 42px; cursor: pointer; position: relative;
+}
+.navToggle span, .navToggle::before, .navToggle::after {
+  content: ""; position: absolute; left: 9px; right: 9px; height: 3.5px;
+  background: var(--ink); border-radius: 2px;
+}
+.navToggle::before { top: 12px; }
+.navToggle span { top: 19px; }
+.navToggle::after { top: 26px; }
+.navToggle[aria-expanded="true"]::before { top: 19px; transform: rotate(45deg); }
+.navToggle[aria-expanded="true"] span { opacity: 0; }
+.navToggle[aria-expanded="true"]::after { top: 19px; transform: rotate(-45deg); }
+
+@media (max-width: 860px) {
+  .navLinks {
+    position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0;
+    background: var(--paper); border-bottom: 4px solid var(--ink);
+    max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+  }
+  .navLinks.open { max-height: 420px; }
+  .navLinks li { border-top: 2px solid var(--ink); }
+  .navLinks a { display: block; padding: 1rem clamp(1.1rem, 4vw, 2.5rem); }
+  .navLinks a::after { display: none; }
+  .navLinks a.active { background: var(--yellow); }
+  .navToggle { display: block; }
+}

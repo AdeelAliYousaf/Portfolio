@@ -1,0 +1,24 @@
+.missions { background: var(--ink); color: var(--paper); }
+.missions :global(.sectionHead p) { color: #D9D4C4; }
+
+.panel { background: var(--paper-2); color: var(--ink); padding: clamp(1.6rem, 4vw, 2.6rem); }
+
+.head { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between; margin-bottom: 1.4rem; }
+.head h3 { font-size: clamp(1.5rem, 3.4vw, 2rem); }
+
+.dateBadge {
+  font-family: var(--font-display-stack); background: var(--red); color: #fff;
+  border: 3px solid var(--ink); border-radius: 8px; padding: 0.4rem 0.9rem;
+  box-shadow: 4px 4px 0 var(--ink); white-space: nowrap;
+}
+
+.clients { font-family: var(--font-hand-stack); color: var(--blue); margin-bottom: 1rem; font-size: 1rem; }
+
+.objectives { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.65rem; }
+.objectives li { display: flex; gap: 0.7rem; align-items: flex-start; margin-bottom: 0; }
+
+.check {
+  flex: 0 0 auto; width: 24px; height: 24px; border: 2.5px solid var(--ink); border-radius: 6px;
+  background: var(--green); color: #fff; display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 900; margin-top: 0.15rem;
+}

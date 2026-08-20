@@ -1,0 +1,20 @@
+.training { background: var(--paper-2); }
+
+.montageRow { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem; margin-bottom: 2.6rem; }
+@media (max-width: 640px) { .montageRow { grid-template-columns: 1fr; } }
+
+.montageCard { padding: 1.2rem 1.3rem; transition: transform 0.2s ease, box-shadow 0.2s ease; }
+.montageCard:hover { transform: translateY(-4px) rotate(var(--r, 0deg)); box-shadow: 12px 12px 0 var(--ink); }
+.year { font-family: var(--font-display-stack); color: var(--red); font-size: 1.05rem; }
+.montageCard h4 { font-family: var(--font-body-stack); font-size: 1.05rem; margin: 0.3rem 0 0.2rem; }
+.org { font-family: var(--font-hand-stack); color: var(--blue); font-size: 0.9rem; }
+
+.badgeRow { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 1.2rem; }
+.certBadge {
+  display: flex; gap: 0.9rem; align-items: flex-start; padding: 1rem 1.1rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.certBadge:hover { transform: translateY(-4px) rotate(var(--r, 0deg)); box-shadow: 12px 12px 0 var(--ink); }
+.certBadge h4 { font-family: var(--font-body-stack); font-size: 0.98rem; margin: 0 0 0.15rem; }
+.certBadge .org { color: var(--green); }
+.medal { flex: 0 0 auto; width: 46px; height: 46px; }

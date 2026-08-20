@@ -1,0 +1,33 @@
+.origin { background: var(--paper-2); }
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.62fr 1.38fr;
+  gap: 2.4rem;
+  align-items: start;
+}
+@media (max-width: 820px) { .grid { grid-template-columns: 1fr; } }
+
+.portrait { padding: 1.6rem; text-align: center; }
+.portrait svg { margin: 0 auto; }
+.caption { font-family: var(--font-hand-stack); margin-top: 1rem; font-size: 0.95rem; color: var(--red); }
+
+.copyPanel { padding: 0; }
+.copyBody { padding: clamp(1.4rem, 3vw, 2.2rem); }
+
+.captionStrip {
+  font-family: var(--font-hand-stack); background: var(--ink); color: var(--paper);
+  display: inline-block; padding: 0.4rem 1rem; border-radius: 5px;
+  transform: rotate(-1deg); margin-bottom: 1.1rem; font-size: 0.95rem;
+}
+
+.statRow {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem; margin-top: 1.8rem;
+}
+.statCard {
+  background: var(--paper); border: 3px solid var(--ink); border-radius: 10px;
+  padding: 0.9rem 1rem; box-shadow: 5px 5px 0 var(--ink);
+}
+.label { font-family: var(--font-hand-stack); font-size: 0.72rem; color: var(--blue); text-transform: uppercase; letter-spacing: 0.5px; }
+.value { font-family: var(--font-body-stack); font-weight: 700; font-size: 0.98rem; margin-top: 0.15rem; }

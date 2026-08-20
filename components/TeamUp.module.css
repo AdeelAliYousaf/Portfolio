@@ -1,0 +1,9 @@
+.teamUp { background: var(--ink); color: var(--paper); text-align: center; }
+.teamUp :global(.eyebrow) { margin-bottom: 1rem; }
+
+.heading { font-size: clamp(2.3rem, 6.5vw, 4rem); color: var(--paper); }
+.lede { max-width: 56ch; margin: 1rem auto 2rem; color: #D9D4C4; }
+.ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+.ctas :global(.btn) { font-size: 1.15rem; }
+.direct { margin-top: 2rem; font-family: var(--font-hand-stack); color: var(--yellow); font-size: 1rem; }
+.direct a { text-decoration: underline; }

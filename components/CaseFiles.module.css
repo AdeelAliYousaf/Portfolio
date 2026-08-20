@@ -1,0 +1,17 @@
+.case { display: grid; grid-template-columns: 1fr; gap: 2.6rem; }
+.file {
+  padding: clamp(1.5rem, 3.5vw, 2.4rem);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.file:hover {
+  transform: translateY(-5px) rotate(var(--r, 0deg));
+  box-shadow: 14px 14px 0 var(--ink);
+}
+
+.top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; align-items: flex-start; margin-bottom: 0.9rem; }
+.title { font-size: clamp(1.5rem, 3.6vw, 2.1rem); }
+.meta { font-family: var(--font-hand-stack); color: var(--blue); font-size: 0.95rem; margin-top: 0.3rem; display: block; }
+.link { font-family: var(--font-display-stack); letter-spacing: 0.3px; }
+.tags { margin-top: 1rem; }
+.note { padding: 1.4rem 1.6rem; margin-top: 0.4rem; }
+.note p { margin: 0; }

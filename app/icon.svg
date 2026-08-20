@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <polygon points="100.0,4.0 117.6,34.3 148.0,16.9 148.1,51.9 183.1,52.0 165.7,82.4 196.0,100.0 165.7,117.6 183.1,148.0 148.1,148.1 148.0,183.1 117.6,165.7 100.0,196.0 82.4,165.7 52.0,183.1 51.9,148.1 16.9,148.0 34.3,117.6 4.0,100.0 34.3,82.4 16.9,52.0 51.9,51.9 52.0,16.9 82.4,34.3" fill="#FFC934" stroke="#16171D" stroke-width="7" stroke-linejoin="round"/>
+  <circle cx="100" cy="100" r="46" fill="#FBF3DD" stroke="#16171D" stroke-width="6"/>
+  <text x="100" y="115" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="52" fill="#16171D">A</text>
+</svg>

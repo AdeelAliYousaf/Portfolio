@@ -1,0 +1,10 @@
+.footer { background: var(--ink); color: #B9B4A2; border-top: 4px solid var(--paper); }
+.inner {
+  display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center;
+  gap: 1rem; padding: 1.6rem clamp(1.1rem, 4vw, 2.5rem); font-size: 0.85rem;
+}
+.backToTop {
+  font-family: var(--font-display-stack); background: var(--yellow); color: var(--ink);
+  border: 3px solid var(--paper); border-radius: 8px; padding: 0.5rem 1rem;
+  text-decoration: none; box-shadow: 3px 3px 0 var(--paper);
+}
