@@ -20,7 +20,7 @@ const jsonLd = {
       address: { "@type": "PostalAddress", addressLocality: "Sialkot", addressCountry: "PK" },
       alumniOf: { "@type": "CollegeOrUniversity", name: "University of Sialkot" },
       knowsAbout: [
-        "React",
+        "React Native",
         "Next.js",
         "React Native",
         "Node.js",
@@ -48,7 +48,7 @@ const jsonLd = {
       "@id": `${siteConfig.url}/#profilepage`,
       url: siteConfig.url,
       name: siteConfig.title,
-      about: { "@id": `${siteConfig.url}/#person` },
+      mainEntity: { "@id": `${siteConfig.url}/#person` },
       isPartOf: { "@id": `${siteConfig.url}/#website` },
       inLanguage: "en-US",
     },
